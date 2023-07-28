@@ -1,0 +1,57 @@
+{
+    "title": "CapsLock only if pressed twice",
+    "rules": [{
+        "description": "CapsLock only if pressed twice",
+        "manipulators": [{
+                "type": "basic",
+                "conditions": [{
+                    "type": "variable_if",
+                    "name": "capslock_pressed",
+                    "value": 1
+                }],
+                "from": {
+                    "key_code": "caps_lock",
+                    "modifiers": {
+                        "optional": [
+                            "any"
+                        ]
+                    }
+                },
+                "to": [{
+                    "key_code": "caps_lock"
+                }]
+            },
+            {
+                "type": "basic",
+                "from": {
+                    "key_code": "caps_lock",
+                    "modifiers": {
+                        "optional": [
+                            "any"
+                        ]
+                    }
+                },
+                "to": [{
+                    "set_variable": {
+                        "name": "capslock_pressed",
+                        "value": 1
+                    }
+                }],
+                "to_delayed_action": {
+                    "to_if_invoked": [{
+                        "set_variable": {
+                            "name": "capslock_pressed",
+                            "value": 0
+                        }
+                    }],
+                    "to_if_canceled": [{
+                        "set_variable": {
+                            "name": "capslock_pressed",
+                            "value": 0
+                        }
+                    }]
+                }
+            }
+        ]
+    }]
+}

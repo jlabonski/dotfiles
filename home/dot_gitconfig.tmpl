@@ -1,0 +1,35 @@
+[user]
+    email = {{ .email }}
+    name = Jeffrey Labonski
+
+[color]
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+
+[core]
+    editor = nano -w
+
+[init]
+    defaultBranch = main
+
+[push]
+    default = upstream
+
+[merge]
+    conflictstyle = diff3
+
+[status]
+    showUntrackedFiles = all
+
+[transfer]
+    fsckobjects = true
+
+[fetch]
+    prune = true
+
+[help]
+    autocorrect = 1
+
