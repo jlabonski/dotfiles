@@ -1,3 +1,5 @@
 {{- $email := promptString "email" -}}
+{{- $hostname := promptString "hostname" -}}
 [data]
     email = {{ $email | quote }}
+    hostname = {{ $hostname }}

@@ -7,17 +7,13 @@ final_space: true
 
 secondary_prompt:
   background: transparent
-  foreground: p:black
-  template: '<p:yellow,transparent></><,p:yellow> > </><p:yellow,transparent></> '
+  foreground: p:cyan
+  template: ' 󱞪 '
 
 transient_prompt:
   background: transparent
-  templates:
-    - '{{ if gt .Code 0 }}<p:red,base03>  {{ .Code }} </>{{ end }}{{else}}<p:green></>{{end}}'
-    - '{{.Folder}}'
-    - '{{.Folder}}'
-    - ' {{ .Shell }}'
-  template: '<p:yellow,transparent></><,p:yellow> {{ .Folder }} </><p:yellow,transparent></> '
+  foreground: 'p:base01'
+  template: '<p:base03,p:base01> {{ .Folder }} </> '
 
 palette:
   background: p:base03
@@ -44,7 +40,7 @@ blocks:
 
   - type: prompt
     alignment: left
-    newline: true
+    newline: false
     segments:
       - type: project
         style: diamond
@@ -79,18 +75,38 @@ blocks:
         style: diamond
         leading_diamond: 
         trailing_diamond: 
-        background: 'p:magenta'
+        background: 'p:violet'
         foreground: 'p:base03'
-        template: ' 󱁢 {{.Version}}::{{.WorkspaceName}} '
+        template: ' 󱁢 v{{if .Version}}{{.Version}}{{else}}unk{{end}}::{{.WorkspaceName}} '
+        properties:
+          fetch_version: true
         
       - type: rust
         style: diamond
         leading_diamond: 
         trailing_diamond: 
-        background: 'p:magenta'
+        background: 'p:violet'
         foreground: 'p:base03'
         template: '  {{ .Full }} '
     
+      - type: go
+        style: diamond
+        leading_diamond: 
+        trailing_diamond: 
+        background: 'p:violet'
+        foreground: 'p:base03'
+        template: ' 󰟓  {{ .Full }} '
+
+      - type: java
+        style: diamond
+        leading_diamond: 
+        trailing_diamond: 
+        background: 'p:violet'
+        foreground: 'p:base03'
+        template: '   {{ .Full }} '
+        properties:
+          display_mode: files
+
 
       - type: git
         style: diamond
@@ -99,15 +115,16 @@ blocks:
         background: 'p:yellow'
         foreground: 'p:base03'
         background_templates:
-          - '{{ if or (.Working.Changed) (.Staging.Changed) }}#FFEB3B{{ end }}'
-          - '{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFCC80{{ end }}'
-          - '{{ if gt .Ahead 0 }}#B388FF{{ end }}'
-          - '{{ if gt .Behind 0 }}#B388FB{{ end }}'
+          - "{{ if or (.Working.Changed) (.Staging.Changed) }}#FFEB3B{{ end }}"
+          - "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFCC80{{ end }}"
+          - "{{ if gt .Ahead 0 }}#B388FF{{ end }}"
+          - "{{ if gt .Behind 0 }}#B388FB{{ end }}"
+        template: "   {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}"
         properties:
           fetch_stash_count: yes
           fetch_status: yes
           fetch_upstream_icon: yes
-        template: '   {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}   {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String  }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} '
+        #template: '   {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}   {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String  }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} '
         
 
   - type: prompt
@@ -140,6 +157,13 @@ blocks:
     alignment: left
     newline: true
     segments:
+      - type: status
+        templates_logic: first_match
+        templates:
+          - '{{ if .Error }}<p:red,transparent></><p:base03,p:red>  error: {{.Code }} </><p:red,transparent></>{{ end }}'
+          - '<p:cyan></>'
+        properties:
+            always_enabled: false
       - type: text
         style: powerline
         powerline_symbol: 
