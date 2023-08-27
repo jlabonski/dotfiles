@@ -165,4 +165,4 @@ export AWS_DEFAULT_REGION=us-east-1
 
 eval "$(oh-my-posh init zsh --config ~/.jlabonski.omp.yaml)"
 
-
+source "$HOME/.cargo/env"

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -euo pipefail
+
+brew update
+brew upgrade
+brew autoremove
+brew cleanup
+omz update
