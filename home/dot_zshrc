@@ -151,7 +151,7 @@ alias kubectl=kubecolor
 compdef kubecolor=kubectl
 
 
-alias yass='brew update && brew upgrade && brew autoremove && brew cleanup && omz update'
+# alias yass='brew update && brew upgrade && brew autoremove && brew cleanup && omz update'
 alias ls='lsd'
 alias lst='lsd --tree'
 alias tf=terraform

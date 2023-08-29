@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -euo pipefail
 
@@ -6,4 +6,6 @@ brew update
 brew upgrade
 brew autoremove
 brew cleanup
-omz update
+
+# https://github.com/ohmyzsh/ohmyzsh/wiki/FAQ#how-do-i-manually-update-oh-my-zsh-from-a-script
+"$ZSH/tools/upgrade.sh"
