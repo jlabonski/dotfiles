@@ -16,12 +16,16 @@ EOF
 )
 
 # If there's no lolcat command, pass through.
+# 	Note: This is mildly cute. It's easy to duplicate the command in an 
+#	`if`, one piped and the other not, but it's definitely not DRY. Can't
+# 	use aliases in a script unless you want _all_ of them and potential
+#	side effects. Piping to a shell function is allowed, though...
 if ! command -v lolcat &> /dev/null
 then	
 	function lolcat() { cat - ; }
 fi
 
-echo "${TITLE}" | lolcat
+echo -e "\n${TITLE}" | lolcat
 
 
 # You'll need a nerdfont for this to look ok
@@ -39,8 +43,8 @@ do
 done
 
 header_line () {
-	echo -e "\n\n"
-	printf "%.${COLUMNS}s\n" "${1} ${FILLER}"
+	#echo -e "\n\n"
+	printf "\n\n%.${COLUMNS}s\n\n" "${1} ${FILLER}"
 }
 
 header_line "Brew update"
