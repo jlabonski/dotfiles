@@ -4,14 +4,30 @@ set -euo pipefail
 
 COLUMNS=$(tput cols)
 
+
+TITLE=$(cat <<- EOF
+	██╗   ██╗ █████╗ ███████╗███████╗
+	╚██╗ ██╔╝██╔══██╗██╔════╝██╔════╝
+	 ╚████╔╝ ███████║███████╗███████╗
+	  ╚██╔╝  ██╔══██║╚════██║╚════██║
+	   ██║   ██║  ██║███████║███████║
+	   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
+EOF
+)
+
+# If there's no lolcat command, pass through.
+if ! command -v lolcat &> /dev/null
+then	
+	function lolcat() { cat - ; }
+fi
+
+echo "${TITLE}" | lolcat
+
+
 # You'll need a nerdfont for this to look ok
+# FILLERCHAR="󰥛" # nice, but doesn't easily play well with column calcs
 
-echo "󰅬󰅬󰅬 󰬠󰬈󰬚󰬚 󰅮󰅮󰅮"
-
-FILLERCHAR="󰥛"
-FILLERCHAR="%"
-
-
+FILLERCHAR="~"
 
 # Forbidden by bash. Ho hum.
 # printf -v FILLER '󰥛%.0s' {1..$COLUMNS}

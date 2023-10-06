@@ -10,7 +10,13 @@ set -euo pipefail
 #  <xbar.version>v1.0</xbar.version>
 
 set +e
-ping -c 1 "${HOST}" -o -t 5 -q >/dev/null 2>&1
+
+# Ping! Reduce errors due to network funkiness. It is outside, after all.
+#  -c 10	10 times
+#  -i 5		5 second interval
+#  -o		exit success when recieveing one response
+ping "${HOST}" -c 10 -i 5 -o -q >/dev/null 2>&1
+
 RETVAL="$?"
 set -e
 
