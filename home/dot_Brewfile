@@ -1,0 +1,265 @@
+tap "hidetatz/tap"
+tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.11"
+# Official Amazon AWS command-line interface
+brew "awscli"
+# Manage your dotfiles across multiple diverse machines, securely
+brew "chezmoi"
+# General purpose syntax highlighter in pure Go
+brew "chroma"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Convert text between DOS, UNIX, and Mac formats
+brew "dos2unix"
+# Modern replacement for 'ls'
+brew "exa"
+# GNU Transport Layer Security (TLS) Library
+brew "gnutls"
+# Banner-like program prints strings as ASCII art
+brew "figlet"
+# Collection of GNU find, xargs, and locate
+brew "findutils"
+# User-friendly command-line shell for UNIX-like operating systems
+brew "fish"
+# GNU awk utility
+brew "gawk"
+# Highest-quality GIF encoder based on pngquant
+brew "gifski"
+# Distributed revision control system
+brew "git"
+# Small git utilities
+brew "git-extras"
+# Command-line option parsing utility
+brew "gnu-getopt"
+# AVH edition of git-flow
+brew "git-flow-avh"
+# Git extension for versioning large files
+brew "git-lfs"
+# C code prettifier
+brew "gnu-indent"
+# GNU implementation of the famous stream editor
+brew "gnu-sed"
+# GNU version of the tar archiving utility
+brew "gnu-tar"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# GNU grep, egrep and fgrep
+brew "grep"
+# Kubernetes package manager
+brew "helm"
+# Improved top (interactive process viewer)
+brew "htop"
+# Configurable static site generator
+brew "hugo"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Kubernetes CLI To Manage Your Clusters In Style!
+brew "k9s"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
+# Package manager for kubectl plugins
+brew "krew"
+# Tool that can switch between kubectl contexts easily and create aliases
+brew "kubectx"
+# Pager program similar to more
+brew "less"
+# Rainbows and unicorns in your console!
+brew "lolcat"
+# Clone of ls with colorful output, file type icons, and more
+brew "lsd"
+# Mac App Store command-line interface
+brew "mas"
+# Single-player roguelike video game
+brew "nethack"
+# Prompt theme engine for any shell
+brew "oh-my-posh"
+# Show ps output as a tree
+brew "pstree"
+# Rust toolchain installer
+brew "rustup-init"
+# Graphic adventure game interpreter
+brew "scummvm"
+# Add a public key to a remote machine's authorized_keys file
+brew "ssh-copy-id"
+# Cross-shell prompt for astronauts
+brew "starship"
+# Tool to build, change, and version infrastructure
+brew "terraform"
+# Programmatically correct mistyped console commands
+brew "thefuck"
+# Color-based alternative to figlet (uses libcaca)
+brew "toilet"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
+# Internet file retriever
+brew "wget"
+# Colorize your kubectl output
+brew "hidetatz/tap/kubecolor"
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
+# Collection of apps and services for photography, design, video, web, and UX
+cask "adobe-creative-cloud"
+# Professional graphic design software
+cask "affinity-designer"
+# Professional image editing software
+cask "affinity-photo"
+# Professional desktop publishing software
+cask "affinity-publisher"
+# Inspect application bundles
+cask "apparency"
+# Create global hotkeys for your files and applications
+cask "apptivate"
+# Multi-cloud backup application
+cask "arq"
+# Menu bar icon organizer
+cask "bartender"
+# Monitors common persistence locations
+cask "blockblock"
+# Contacts manager
+cask "cardhop"
+# Free and open-source web browser
+cask "chromium"
+# Plain-text editor for web pages, program source codes and more
+cask "coteditor"
+# Voice and text chat software
+cask "discord"
+# Developer platform
+cask "dotnet"
+# Calendar software
+cask "fantastical"
+# Web browser
+cask "firefox"
+# Flip clock screensaver
+cask "fliqlo"
+cask "font-devicons"
+# Developer targeted fonts with a high number of glyphs
+cask "font-go-mono-nerd-font"
+# Git interface focused on visual interaction
+cask "gitup"
+# Web browser
+cask "google-chrome"
+# Graphically shows disk usage within a file system
+cask "grandperspective"
+# Open-source video transcoder
+cask "handbrake"
+# Documentation application for home and belongings
+cask "home-inventory"
+# Block nags to accept cookies and privacy invasive tracking in Safari
+cask "hush"
+# Free and open-source media player
+cask "iina"
+# System monitoring app
+cask "istat-menus"
+# Open-source screen recorder built with web technology
+cask "kap"
+# Keyboard customizer
+cask "karabiner-elements"
+# Open-source keystroke visualizer
+cask "keycastr"
+# GPU-based terminal emulator
+cask "kitty"
+# Tool to show what is persistently installed on the computer
+cask "knockknock"
+# Open-source firewall to block unknown outgoing connections
+cask "lulu"
+# Video format converter (transcoder)
+cask "makemkv"
+# Shows the next meeting in the menu bar
+cask "meetingbar"
+# Monitors and reports any microphone and camera activity
+cask "micro-snitch"
+# Meet, chat, call, and collaborate in just one place
+cask "microsoft-teams"
+# Native app email client for Gmail
+cask "mimestream"
+# Utility that automatically downloads firmwares and installers
+cask "mist"
+# Tool to control external monitor brightness & volume
+cask "monitorcontrol"
+# Tool to create text-based art
+cask "monodraw"
+# Mouse utility to add gesture functions and smooth scrolling to 3rd party mice
+cask "mouse-fix"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+# Cloud storage client
+cask "onedrive"
+# Retro video game emulation
+cask "openemu"
+# Open source build of Lens Kubernetes IDE
+cask "openlens"
+# Monitors computer mic and webcam
+cask "oversight"
+# Home media player
+cask "plex"
+# Browse, manage, inspect containers and images
+cask "podman-desktop"
+# QuickLook plug-in that renders source code with syntax highlighting
+cask "qlcolorcode"
+# Display image info and preview unsupported formats in QuickLook
+cask "qlimagesize"
+# QuickLook generator for Markdown files
+cask "qlmarkdown"
+# QuickLook plugin for plaintext files without an extension
+cask "qlstephen"
+# QuickLook plugin for CSV files
+cask "quicklook-csv"
+# QuickLook plugin for JSON files
+cask "quicklook-json"
+# Move and resize windows using keyboard shortcuts or snap areas
+cask "rectangle"
+# Emoji picker optimized for blind people
+cask "rocket"
+# Instant messaging application focusing on security
+cask "signal"
+# Team communication and collaboration software
+cask "slack"
+# Video game digital distribution service
+cask "steam"
+# Quicklook extension for source files
+cask "syntax-highlight"
+# Messaging app with a focus on speed and security
+cask "telegram"
+# Open-source BitTorrent client
+cask "transmission"
+cask "transmission-remote-gui"
+# Virtual machines UI using QEMU
+cask "utm"
+# Open-source code editor
+cask "visual-studio-code"
+# View output from scripts in the menu bar
+cask "xbar"
+# Video communication and virtual meeting platform
+cask "zoom"
+mas "Amphetamine", id: 937984704
+mas "Apple Configurator", id: 1037126344
+mas "Brother iPrint&Scan", id: 1193539993
+mas "Clocker", id: 1056643111
+mas "DevUtils", id: 1533756032
+mas "Flighty", id: 1358823008
+mas "GarageBand", id: 682658836
+mas "Gifox", id: 1461845568
+mas "Gifski", id: 1351639930
+mas "Hand Mirror", id: 1502839586
+mas "HotKey", id: 975890633
+mas "iMovie", id: 408981434
+mas "In Your Face", id: 1476964367
+mas "Keynote", id: 409183694
+mas "Milkshake", id: 1440379601
+mas "myTuner Radio Pro", id: 808285143
+mas "Noizio", id: 928871589
+mas "Numbers", id: 409203825
+mas "OmniFocus", id: 1346203938
+mas "OmniGraffle", id: 1142578753
+mas "Pages", id: 409201541
+mas "Parcel", id: 639968404
+mas "Paste", id: 967805235
+mas "Petrify", id: 1451177988
+mas "Relax", id: 1440712920
+mas "SomaFM", id: 449155338
+mas "StopTheMadness", id: 1376402589
+mas "Xcode", id: 497799835

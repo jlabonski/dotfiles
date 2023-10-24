@@ -2,9 +2,6 @@
 
 set -euo pipefail
 
-COLUMNS=$(tput cols)
-
-
 TITLE=$(cat <<- EOF
 	██╗   ██╗ █████╗ ███████╗███████╗
 	╚██╗ ██╔╝██╔══██╗██╔════╝██╔════╝
@@ -31,11 +28,14 @@ echo -e "\n${TITLE}" | lolcat
 # You'll need a nerdfont for this to look ok
 # FILLERCHAR="󰥛" # nice, but doesn't easily play well with column calcs
 
+# No nerdfont needed. :/ 
 FILLERCHAR="~"
 
-# Forbidden by bash. Ho hum.
-# printf -v FILLER '󰥛%.0s' {1..$COLUMNS}
+# Forbidden by bash. Ho hum. We'll use a while loop instead.
+#     printf -v FILLER '󰥛%.0s' {1..$COLUMNS}
+
 FILLER=""
+COLUMNS=$(tput cols)
 TEMP=COLUMNS
 while ((TEMP--))
 do
@@ -59,7 +59,21 @@ brew autoremove
 header_line "Brew cleanup"
 brew cleanup
 
-if command -v mas
+header_line "Brewfile save"
+#brew bundle dump --file=- | grep -v '^vscode' > "${CHEZMOI_DIR}/Brewfile"
+brew bundle dump --global --force --formula --cask --tap --mas --whalebrew --describe
+
+header_line "Chezmoi update"
+chezmoi git pull
+chezmoi apply
+
+header_line "Brewfile update"
+brew bundle --global install --quiet --no-upgrade --no-lock | grep -v '^Using '
+
+header_line "Brewfile cleanup"
+brew bundle --global cleanup --verbose 
+
+if command -v mas &> /dev/null
 then
 	header_line "App Store update"
 	mas upgrade
@@ -69,19 +83,25 @@ if [ -x "${ZSH}/tools/upgrade.sh" ]
 then
 	header_line "Oh My ZSH update"
 	# https://github.com/ohmyzsh/ohmyzsh/wiki/FAQ#how-do-i-manually-update-oh-my-zsh-from-a-script
-	"${ZSH}/tools/upgrade.sh"
+	"${ZSH}/tools/upgrade.sh" -v silent
 fi
 
-header_line "Chezmoi update"
-chezmoi git pull
-chezmoi apply
+
+header_line "Brew doctor"
+
+# Ignore the following audit checks: check_for_non_prefixed_coreutils, 
+# check_for_non_prefixed_findutils. The CLI ain't all that great at
+# facilitating this.
+brew doctor --list-checks | grep -v '^check_for_non_prefixed_coreutils$' | grep -v '^check_for_non_prefixed_findutils$' | xargs brew doctor --quiet || true
+
+header_line "Chezmoi doctor"
+chezmoi doctor | grep -v "^[info|ok]"
 
 header_line "Chezmoi status"
 chezmoi status
 
-header_line "Brew doctor"
-brew doctor || true
+header_line "Chezmoi git status"
+chezmoi git status
 
-header_line "Chezmoi doctor"
-chezmoi doctor | grep -v "^[info|ok]"
+
 
