@@ -13,8 +13,8 @@ brew "chroma"
 brew "coreutils"
 # Convert text between DOS, UNIX, and Mac formats
 brew "dos2unix"
-# Modern replacement for 'ls'
-brew "exa"
+# Modern, maintained replacement for ls
+brew "eza"
 # GNU Transport Layer Security (TLS) Library
 brew "gnutls"
 # Banner-like program prints strings as ASCII art

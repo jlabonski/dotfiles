@@ -62,6 +62,7 @@ brew cleanup
 header_line "Brewfile save"
 #brew bundle dump --file=- | grep -v '^vscode' > "${CHEZMOI_DIR}/Brewfile"
 brew bundle dump --global --force --formula --cask --tap --mas --whalebrew --describe
+chezmoi add ~/.Brewfile
 
 header_line "Chezmoi update"
 chezmoi git pull
@@ -76,7 +77,7 @@ brew bundle --global cleanup --verbose
 if command -v mas &> /dev/null
 then
 	header_line "App Store update"
-	mas upgrade
+	mas upgrade 2>&1  #| sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g' | grep -v '^Warning: Nothing found to upgrade'
 fi
 
 if [ -x "${ZSH}/tools/upgrade.sh" ]
@@ -103,5 +104,7 @@ chezmoi status
 header_line "Chezmoi git status"
 chezmoi git status
 
-
+header_line "System update"
+softwareupdate --list
+# nohup softwareupdate --download --all >/dev/null 2>&1 &
 

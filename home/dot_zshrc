@@ -151,7 +151,7 @@ alias kubectl=kubecolor
 compdef kubecolor=kubectl
 
 
-# alias yass='brew update && brew upgrade && brew autoremove && brew cleanup && omz update'
+#alias ls='eza --git -o --group-directories-first --time-style="+%a %b %e %Y %k:%M:%S%.3f" --icons -b'
 alias ls='lsd'
 alias lst='lsd --tree'
 alias tf=terraform
