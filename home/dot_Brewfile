@@ -146,8 +146,6 @@ cask "google-chrome"
 cask "grandperspective"
 # Open-source video transcoder
 cask "handbrake"
-# Documentation application for home and belongings
-cask "home-inventory"
 # Block nags to accept cookies and privacy invasive tracking in Safari
 cask "hush"
 # Free and open-source media player
@@ -245,6 +243,7 @@ mas "GarageBand", id: 682658836
 mas "Gifox", id: 1461845568
 mas "Gifski", id: 1351639930
 mas "Hand Mirror", id: 1502839586
+mas "Home Inventory", id: 413564952
 mas "HotKey", id: 975890633
 mas "iMovie", id: 408981434
 mas "In Your Face", id: 1476964367
@@ -262,4 +261,5 @@ mas "Petrify", id: 1451177988
 mas "Relax", id: 1440712920
 mas "SomaFM", id: 449155338
 mas "StopTheMadness", id: 1376402589
+mas "Tot", id: 1491071483
 mas "Xcode", id: 497799835
