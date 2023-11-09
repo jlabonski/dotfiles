@@ -108,3 +108,6 @@ header_line "System update"
 softwareupdate --list
 # nohup softwareupdate --download --all >/dev/null 2>&1 &
 
+# /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app/Contents/MacOS
+# timeout --kill-after=1s 10s ./msupdate  --list | grep -v "No updates available" | grep -Ev '^\s+?$' | wc -l
+

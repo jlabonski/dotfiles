@@ -1,8 +1,6 @@
 tap "hidetatz/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.11"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Manage your dotfiles across multiple diverse machines, securely
@@ -13,12 +11,10 @@ brew "chroma"
 brew "coreutils"
 # Convert text between DOS, UNIX, and Mac formats
 brew "dos2unix"
-# Modern, maintained replacement for ls
-brew "eza"
+# Modern replacement for 'ls'
+brew "exa"
 # GNU Transport Layer Security (TLS) Library
 brew "gnutls"
-# Banner-like program prints strings as ASCII art
-brew "figlet"
 # Collection of GNU find, xargs, and locate
 brew "findutils"
 # User-friendly command-line shell for UNIX-like operating systems
@@ -67,8 +63,6 @@ brew "krew"
 brew "kubectx"
 # Pager program similar to more
 brew "less"
-# Rainbows and unicorns in your console!
-brew "lolcat"
 # Clone of ls with colorful output, file type icons, and more
 brew "lsd"
 # Mac App Store command-line interface
@@ -79,8 +73,6 @@ brew "nethack"
 brew "oh-my-posh"
 # Show ps output as a tree
 brew "pstree"
-# Rust toolchain installer
-brew "rustup-init"
 # Graphic adventure game interpreter
 brew "scummvm"
 # Add a public key to a remote machine's authorized_keys file
@@ -91,8 +83,6 @@ brew "starship"
 brew "terraform"
 # Programmatically correct mistyped console commands
 brew "thefuck"
-# Color-based alternative to figlet (uses libcaca)
-brew "toilet"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
 # Internet file retriever
@@ -111,18 +101,20 @@ cask "affinity-photo"
 cask "affinity-publisher"
 # Inspect application bundles
 cask "apparency"
-# Create global hotkeys for your files and applications
-cask "apptivate"
 # Multi-cloud backup application
 cask "arq"
 # Menu bar icon organizer
 cask "bartender"
+# Tool to customize input devices and automate computer systems
+cask "bettertouchtool"
 # Monitors common persistence locations
 cask "blockblock"
-# Contacts manager
-cask "cardhop"
+# Markdown note editor for developers
+cask "boost-note"
 # Free and open-source web browser
 cask "chromium"
+# Free app that makes your Internet safer
+cask "cloudflare-warp"
 # Plain-text editor for web pages, program source codes and more
 cask "coteditor"
 # Voice and text chat software
@@ -160,24 +152,22 @@ cask "kap"
 cask "karabiner-elements"
 # Open-source keystroke visualizer
 cask "keycastr"
+# Interface for reading and syncing eBooks
+cask "kindle"
 # GPU-based terminal emulator
 cask "kitty"
 # Tool to show what is persistently installed on the computer
 cask "knockknock"
-# Open-source firewall to block unknown outgoing connections
-cask "lulu"
+# Host-based application firewall
+cask "little-snitch"
 # Video format converter (transcoder)
 cask "makemkv"
 # Shows the next meeting in the menu bar
 cask "meetingbar"
 # Monitors and reports any microphone and camera activity
 cask "micro-snitch"
-# Meet, chat, call, and collaborate in just one place
-cask "microsoft-teams"
 # Native app email client for Gmail
 cask "mimestream"
-# Utility that automatically downloads firmwares and installers
-cask "mist"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
 # Tool to create text-based art
@@ -196,8 +186,6 @@ cask "openlens"
 cask "oversight"
 # Home media player
 cask "plex"
-# Browse, manage, inspect containers and images
-cask "podman-desktop"
 # QuickLook plug-in that renders source code with syntax highlighting
 cask "qlcolorcode"
 # Display image info and preview unsupported formats in QuickLook
@@ -233,6 +221,8 @@ cask "utm"
 cask "visual-studio-code"
 # View output from scripts in the menu bar
 cask "xbar"
+# Screen savers
+cask "xscreensaver"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "Amphetamine", id: 937984704
@@ -242,13 +232,12 @@ mas "Clocker", id: 1056643111
 mas "DevUtils", id: 1533756032
 mas "Flighty", id: 1358823008
 mas "GarageBand", id: 682658836
-mas "Gifox", id: 1461845568
-mas "Gifski", id: 1351639930
 mas "Hand Mirror", id: 1502839586
 mas "HotKey", id: 975890633
 mas "iMovie", id: 408981434
 mas "In Your Face", id: 1476964367
 mas "Keynote", id: 409183694
+mas "Mapper", id: 1589391989
 mas "Milkshake", id: 1440379601
 mas "myTuner Radio Pro", id: 808285143
 mas "Noizio", id: 928871589
@@ -259,6 +248,7 @@ mas "Pages", id: 409201541
 mas "Parcel", id: 639968404
 mas "Paste", id: 967805235
 mas "Petrify", id: 1451177988
+mas "Photomator", id: 1444636541
 mas "Relax", id: 1440712920
 mas "SomaFM", id: 449155338
 mas "StopTheMadness", id: 1376402589
