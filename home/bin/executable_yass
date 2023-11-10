@@ -63,6 +63,7 @@ header_line "Brewfile save"
 brew bundle dump --global --force --formula --cask --tap --mas --whalebrew --describe
 chezmoi add ~/.Brewfile
 
+# Chicken and egg problem here: collisions are possible
 header_line "Chezmoi update"
 chezmoi git pull
 chezmoi apply
@@ -71,7 +72,7 @@ header_line "Brewfile update"
 brew bundle --global install --quiet --no-upgrade --no-lock | grep -v '^Using '
 
 header_line "Brewfile cleanup"
-brew bundle --global cleanup --verbose 
+brew bundle --global cleanup --force --verbose 
 
 if command -v mas &> /dev/null
 then
