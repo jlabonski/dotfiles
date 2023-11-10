@@ -1,6 +1,9 @@
+tap "b3z/small"
 tap "hidetatz/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.11"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Manage your dotfiles across multiple diverse machines, securely
@@ -13,8 +16,12 @@ brew "coreutils"
 brew "dos2unix"
 # Modern replacement for 'ls'
 brew "exa"
+# Modern, maintained replacement for ls
+brew "eza"
 # GNU Transport Layer Security (TLS) Library
 brew "gnutls"
+# Banner-like program prints strings as ASCII art
+brew "figlet"
 # Collection of GNU find, xargs, and locate
 brew "findutils"
 # User-friendly command-line shell for UNIX-like operating systems
@@ -63,6 +70,8 @@ brew "krew"
 brew "kubectx"
 # Pager program similar to more
 brew "less"
+# Rainbows and unicorns in your console!
+brew "lolcat"
 # Clone of ls with colorful output, file type icons, and more
 brew "lsd"
 # Mac App Store command-line interface
@@ -73,6 +82,8 @@ brew "nethack"
 brew "oh-my-posh"
 # Show ps output as a tree
 brew "pstree"
+# Rust toolchain installer
+brew "rustup-init"
 # Graphic adventure game interpreter
 brew "scummvm"
 # Add a public key to a remote machine's authorized_keys file
@@ -83,6 +94,8 @@ brew "starship"
 brew "terraform"
 # Programmatically correct mistyped console commands
 brew "thefuck"
+# Color-based alternative to figlet (uses libcaca)
+brew "toilet"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
 # Internet file retriever
@@ -91,6 +104,8 @@ brew "wget"
 brew "hidetatz/tap/kubecolor"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Show MS Windows style activation dialog on my screen.
+cask "activate"
 # Collection of apps and services for photography, design, video, web, and UX
 cask "adobe-creative-cloud"
 # Professional graphic design software
@@ -101,6 +116,8 @@ cask "affinity-photo"
 cask "affinity-publisher"
 # Inspect application bundles
 cask "apparency"
+# Create global hotkeys for your files and applications
+cask "apptivate"
 # Multi-cloud backup application
 cask "arq"
 # Menu bar icon organizer
@@ -111,6 +128,8 @@ cask "bettertouchtool"
 cask "blockblock"
 # Markdown note editor for developers
 cask "boost-note"
+# Contacts manager
+cask "cardhop"
 # Free and open-source web browser
 cask "chromium"
 # Free app that makes your Internet safer
@@ -158,14 +177,20 @@ cask "kitty"
 cask "knockknock"
 # Host-based application firewall
 cask "little-snitch"
+# Open-source firewall to block unknown outgoing connections
+cask "lulu"
 # Video format converter (transcoder)
 cask "makemkv"
 # Shows the next meeting in the menu bar
 cask "meetingbar"
 # Monitors and reports any microphone and camera activity
 cask "micro-snitch"
+# Meet, chat, call, and collaborate in just one place
+cask "microsoft-teams"
 # Native app email client for Gmail
 cask "mimestream"
+# Utility that automatically downloads firmwares and installers
+cask "mist"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
 # Tool to create text-based art
@@ -184,6 +209,8 @@ cask "openlens"
 cask "oversight"
 # Home media player
 cask "plex"
+# Browse, manage, inspect containers and images
+cask "podman-desktop"
 # QuickLook plug-in that renders source code with syntax highlighting
 cask "qlcolorcode"
 # Display image info and preview unsupported formats in QuickLook
@@ -230,6 +257,8 @@ mas "Clocker", id: 1056643111
 mas "DevUtils", id: 1533756032
 mas "Flighty", id: 1358823008
 mas "GarageBand", id: 682658836
+mas "Gifox", id: 1461845568
+mas "Gifski", id: 1351639930
 mas "Hand Mirror", id: 1502839586
 mas "Home Inventory", id: 413564952
 mas "HotKey", id: 975890633

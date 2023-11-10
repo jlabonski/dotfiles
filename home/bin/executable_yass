@@ -24,7 +24,6 @@ fi
 
 echo -e "\n${TITLE}" | lolcat
 
-
 # You'll need a nerdfont for this to look ok
 # FILLERCHAR="󰥛" # nice, but doesn't easily play well with column calcs
 
@@ -44,7 +43,7 @@ done
 
 header_line () {
 	#echo -e "\n\n"
-	printf "\n\n%.${COLUMNS}s\n\n" "${1} ${FILLER}"
+	printf "\n\n%.${COLUMNS}s\n\n" "${1} ${FILLER}" | lolcat -S 21 -p 10
 }
 
 header_line "Brew update"
@@ -104,10 +103,14 @@ chezmoi status
 header_line "Chezmoi git status"
 chezmoi git status
 
-header_line "System update"
+header_line "MacOS system update"
 softwareupdate --list
 # nohup softwareupdate --download --all >/dev/null 2>&1 &
 
-# /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app/Contents/MacOS
-# timeout --kill-after=1s 10s ./msupdate  --list | grep -v "No updates available" | grep -Ev '^\s+?$' | wc -l
+header_line "Microsoft Update"
+timeout --kill-after=1s 60s \
+	"/Library/Application Support/Microsoft/MAU2.0/Microsoft AutoUpdate.app/Contents/MacOS/msupdate" \
+	--list | grep -Ev '^\s+?$'
 
+header_line "Done"
+echo "YASS COMPLETE" | lolcat -p .5
