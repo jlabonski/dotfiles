@@ -14,8 +14,6 @@ brew "chroma"
 brew "coreutils"
 # Convert text between DOS, UNIX, and Mac formats
 brew "dos2unix"
-# Modern replacement for 'ls'
-brew "exa"
 # Modern, maintained replacement for ls
 brew "eza"
 # GNU Transport Layer Security (TLS) Library
@@ -114,6 +112,8 @@ cask "affinity-designer"
 cask "affinity-photo"
 # Professional desktop publishing software
 cask "affinity-publisher"
+# Application launcher and productivity software
+cask "alfred"
 # Inspect application bundles
 cask "apparency"
 # Create global hotkeys for your files and applications
@@ -185,6 +185,8 @@ cask "makemkv"
 cask "meetingbar"
 # Monitors and reports any microphone and camera activity
 cask "micro-snitch"
+# Provides updates to various Microsoft products
+cask "microsoft-auto-update"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
 # Native app email client for Gmail
