@@ -201,6 +201,8 @@ cask "monitorcontrol"
 cask "monodraw"
 # Mouse utility to add gesture functions and smooth scrolling to 3rd party mice
 cask "mouse-fix"
+# Open-source software for live streaming and screen recording
+cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Cloud storage client
@@ -227,6 +229,8 @@ cask "qlstephen"
 cask "quicklook-csv"
 # QuickLook plugin for JSON files
 cask "quicklook-json"
+# Protect your personal files
+cask "ransomwhere"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Emoji picker optimized for blind people
@@ -246,6 +250,8 @@ cask "transmission"
 cask "transmission-remote-gui"
 # Virtual machines UI using QEMU
 cask "utm"
+# Keyboard configurator
+cask "via"
 # Open-source code editor
 cask "visual-studio-code"
 # View output from scripts in the menu bar
