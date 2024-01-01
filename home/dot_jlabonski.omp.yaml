@@ -49,28 +49,6 @@ blocks:
         background: 'p:yellow'
         template: ' {{ if .Version }} {{.Version}}{{ end }} {{ if .Name }}{{ .Name}}{{ end }} '     
            
-      - type: aws
-        style: diamond
-        leading_diamond: 
-        trailing_diamond: 
-        background: 'p:blue'
-        foreground: 'p:base03'
-        template: '  {{.Profile}}::{{.Region}} '
-        properties:
-          always_enabled: true
-
-      - type: kubectl
-        style: diamond
-        leading_diamond: 
-        trailing_diamond: 
-        background: 'p:magenta'
-        foreground: 'p:base03'
-        template: ' 󱃾 {{.Context}}::{{if .Namespace}}{{.Namespace}}{{else}}default{{end}} '
-        properties:
-          context_aliases: {}
-          parse_kubeconfig: yes
-        
-
       - type: terraform
         style: diamond
         leading_diamond: 
@@ -81,6 +59,19 @@ blocks:
         properties:
           fetch_version: true
         
+      - type: node
+        style: diamond
+        leading_diamond: 
+        trailing_diamond: 
+        background: 'p:violet'
+        foreground: 'p:base03'
+        template: ' 󰎙 {{.Full}} {{ if .PackageManagerIcon }}via {{.PackageManagerIcon }}{{ end }}{{ if .Mismatch }} nvmrc mismatch{{ end }} '
+        properties:
+          fetch_version: true
+          fetch_package_manager: true
+          npm_icon: npm
+          yarn_icon: yarn
+
       - type: rust
         style: diamond
         leading_diamond: 
@@ -107,6 +98,27 @@ blocks:
         properties:
           display_mode: files
 
+      - type: aws
+        style: diamond
+        leading_diamond: 
+        trailing_diamond: 
+        background: 'p:blue'
+        foreground: 'p:base03'
+        template: '  {{.Profile}}::{{.Region}} '
+        properties:
+          always_enabled: true
+
+      - type: kubectl
+        style: diamond
+        leading_diamond: 
+        trailing_diamond: 
+        background: 'p:magenta'
+        foreground: 'p:base03'
+        template: ' 󱃾 {{.Context}}::{{if .Namespace}}{{.Namespace}}{{else}}default{{end}} '
+        properties:
+          context_aliases: {}
+          parse_kubeconfig: yes
+        
 
       - type: git
         style: diamond
@@ -119,7 +131,7 @@ blocks:
           - "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFCC80{{ end }}"
           - "{{ if gt .Ahead 0 }}#B388FF{{ end }}"
           - "{{ if gt .Behind 0 }}#B388FB{{ end }}"
-        template: "   hd {{ .HEAD }} bs {{ .BranchStatus }} work {{ .Working.String }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }}"
+        template: "   {{ .HEAD }} bs {{ .BranchStatus }} work {{ .Working.String }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }}"
         properties:
           fetch_stash_count: yes
           fetch_status: yes
