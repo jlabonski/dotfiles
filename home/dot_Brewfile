@@ -132,6 +132,8 @@ cask "bettertouchtool"
 cask "blockblock"
 # Markdown note editor for developers
 cask "boost-note"
+# E-books management software
+cask "calibre"
 # Contacts manager
 cask "cardhop"
 # Free and open-source web browser
@@ -173,8 +175,6 @@ cask "kap"
 cask "karabiner-elements"
 # Open-source keystroke visualizer
 cask "keycastr"
-# Interface for reading and syncing eBooks
-cask "kindle"
 # GPU-based terminal emulator
 cask "kitty"
 # Tool to show what is persistently installed on the computer
@@ -211,6 +211,8 @@ cask "obsidian"
 cask "onedrive"
 # Retro video game emulation
 cask "openemu"
+# Finder Toolbar app to open the current directory in Terminal or Editor
+cask "openinterminal"
 # Open source build of Lens Kubernetes IDE
 cask "openlens"
 # Monitors computer mic and webcam
@@ -233,6 +235,8 @@ cask "quicklook-csv"
 cask "quicklook-json"
 # Protect your personal files
 cask "ransomwhere"
+# Archive manager for data compression and backups
+cask "rar"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Emoji picker optimized for blind people
