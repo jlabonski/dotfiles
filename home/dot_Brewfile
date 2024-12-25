@@ -3,13 +3,15 @@ tap "hidetatz/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 # Interpreted, interactive, object-oriented programming language
-brew "python@3.11"
+brew "python@3.12"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
 # General purpose syntax highlighter in pure Go
 brew "chroma"
+# Container runtimes on MacOS (and Linux) with minimal setup
+brew "colima"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Convert text between DOS, UNIX, and Mac formats
@@ -18,6 +20,8 @@ brew "dos2unix"
 brew "eza"
 # GNU Transport Layer Security (TLS) Library
 brew "gnutls"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg@6"
 # Banner-like program prints strings as ASCII art
 brew "figlet"
 # Collection of GNU find, xargs, and locate
@@ -26,10 +30,14 @@ brew "findutils"
 brew "fish"
 # GNU awk utility
 brew "gawk"
+# Open Visual Inference And Optimization toolkit for AI inference
+brew "openvino"
 # Highest-quality GIF encoder based on pngquant
 brew "gifski"
 # Distributed revision control system
 brew "git"
+# Automatic git commit --fixup
+brew "git-absorb"
 # Small git utilities
 brew "git-extras"
 # Command-line option parsing utility
@@ -48,14 +56,22 @@ brew "gnu-tar"
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Fast linters runner for Go
+brew "golangci-lint"
 # GNU grep, egrep and fgrep
 brew "grep"
+# CLI for backing up and restoring Gmail messages
+brew "gyb"
 # Kubernetes package manager
 brew "helm"
 # Improved top (interactive process viewer)
 brew "htop"
 # Configurable static site generator
 brew "hugo"
+# Comprehensive RPC framework
+brew "ice"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Kubernetes CLI To Manage Your Clusters In Style!
@@ -80,10 +96,16 @@ brew "nethack"
 brew "nvm"
 # Prompt theme engine for any shell
 brew "oh-my-posh"
+# Convert PDFs to images
+brew "pdf2image"
 # Show ps output as a tree
 brew "pstree"
+# Generic syntax highlighter
+brew "pygments"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.11"
 # Rust toolchain installer
-brew "rustup-init"
+brew "rustup"
 # Graphic adventure game interpreter
 brew "scummvm"
 # Add a public key to a remote machine's authorized_keys file
@@ -124,9 +146,9 @@ cask "apparency"
 cask "apptivate"
 # Multi-cloud backup application
 cask "arq"
-# Menu bar icon organizer
+# Menu bar icon organiser
 cask "bartender"
-# Tool to customize input devices and automate computer systems
+# Tool to customise input devices and automate computer systems
 cask "bettertouchtool"
 # Monitors common persistence locations
 cask "blockblock"
@@ -153,14 +175,17 @@ cask "firefox"
 # Flip clock screensaver
 cask "fliqlo"
 cask "font-devicons"
-# Developer targeted fonts with a high number of glyphs
 cask "font-go-mono-nerd-font"
+# Git client for simultaneous branches on top of your existing workflow
+cask "gitbutler"
 # Git interface focused on visual interaction
 cask "gitup"
 # Web browser
 cask "google-chrome"
 # Graphically shows disk usage within a file system
 cask "grandperspective"
+# Open Source Multimedia Framework
+cask "gstreamer-runtime"
 # Open-source video transcoder
 cask "handbrake"
 # Block nags to accept cookies and privacy invasive tracking in Safari
@@ -169,11 +194,13 @@ cask "hush"
 cask "iina"
 # System monitoring app
 cask "istat-menus"
+# Menu bar manager
+cask "jordanbaird-ice"
 # Open-source screen recorder built with web technology
 cask "kap"
-# Keyboard customizer
+# Keyboard customiser
 cask "karabiner-elements"
-# Open-source keystroke visualizer
+# Open-source keystroke visualiser
 cask "keycastr"
 # GPU-based terminal emulator
 cask "kitty"
@@ -181,8 +208,10 @@ cask "kitty"
 cask "knockknock"
 # Host-based application firewall
 cask "little-snitch"
-# Open-source firewall to block unknown outgoing connections
-cask "lulu"
+# Privacy-first, open-source platform for knowledge sharing and management
+cask "logseq"
+# Mouse utility to add gesture functions and smooth scrolling to 3rd party mice
+cask "mac-mouse-fix"
 # Video format converter (transcoder)
 cask "makemkv"
 # Shows the next meeting in the menu bar
@@ -201,8 +230,8 @@ cask "mist"
 cask "monitorcontrol"
 # Tool to create text-based art
 cask "monodraw"
-# Mouse utility to add gesture functions and smooth scrolling to 3rd party mice
-cask "mouse-fix"
+# GameStream client
+cask "moonlight"
 # Open-source software for live streaming and screen recording
 cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
@@ -221,17 +250,19 @@ cask "oversight"
 cask "plex"
 # Browse, manage, inspect containers and images
 cask "podman-desktop"
-# QuickLook plug-in that renders source code with syntax highlighting
+# Collaboration platform for API development
+cask "postman"
+# Quick Look plug-in that renders source code with syntax highlighting
 cask "qlcolorcode"
 # Display image info and preview unsupported formats in QuickLook
 cask "qlimagesize"
-# QuickLook generator for Markdown files
+# Quick Look generator for Markdown files
 cask "qlmarkdown"
-# QuickLook plugin for plaintext files without an extension
+# Quick Look plugin for plaintext files without an extension
 cask "qlstephen"
-# QuickLook plugin for CSV files
+# Quick Look plugin for CSV files
 cask "quicklook-csv"
-# QuickLook plugin for JSON files
+# Quick Look plugin for JSON files
 cask "quicklook-json"
 # Protect your personal files
 cask "ransomwhere"
@@ -239,7 +270,7 @@ cask "ransomwhere"
 cask "rar"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
-# Emoji picker optimized for blind people
+# Emoji picker optimised for blind people
 cask "rocket"
 # Instant messaging application focusing on security
 cask "signal"
@@ -262,8 +293,12 @@ cask "via"
 cask "visual-studio-code"
 # Native desktop client for WhatsApp
 cask "whatsapp"
+# Compatibility layer to run Windows applications
+cask "wine-stable"
 # View output from scripts in the menu bar
 cask "xbar"
+# System monitor
+cask "xrg"
 # Screen savers
 cask "xscreensaver"
 # Video communication and virtual meeting platform
@@ -271,6 +306,7 @@ cask "zoom"
 mas "Amphetamine", id: 937984704
 mas "Apple Configurator", id: 1037126344
 mas "Brother iPrint&Scan", id: 1193539993
+mas "CleanMyKeyboard", id: 6468120888
 mas "Clocker", id: 1056643111
 mas "DevUtils", id: 1533756032
 mas "Flighty", id: 1358823008
@@ -278,10 +314,11 @@ mas "GarageBand", id: 682658836
 mas "Gifox", id: 1461845568
 mas "Gifski", id: 1351639930
 mas "Hand Mirror", id: 1502839586
+mas "Hidden Folks+", id: 1584550483
 mas "Home Inventory", id: 413564952
 mas "HotKey", id: 975890633
-mas "iMovie", id: 408981434
 mas "In Your Face", id: 1476964367
+mas "iPic", id: 1101244278
 mas "Keynote", id: 409183694
 mas "Mapper", id: 1589391989
 mas "Milkshake", id: 1440379601
@@ -296,7 +333,11 @@ mas "Paste", id: 967805235
 mas "Petrify", id: 1451177988
 mas "Photomator", id: 1444636541
 mas "Relax", id: 1440712920
+mas "S3", id: 6447647340
+mas "Samorost 3+", id: 1611529849
 mas "SomaFM", id: 449155338
 mas "StopTheMadness", id: 1376402589
+mas "StopTheMadness Pro", id: 6471380298
+mas "TheOregonTrail", id: 1502228492
 mas "Tot", id: 1491071483
 mas "Xcode", id: 497799835
